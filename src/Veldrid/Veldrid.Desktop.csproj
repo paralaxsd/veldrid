@@ -1,0 +1,290 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{34ED4C14-10AC-4F16-B198-6991E631B895}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Veldrid.Desktop</RootNamespace>
+    <AssemblyName>Veldrid.Desktop</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <DefineConstants>TRACE;DEBUG;EXCLUDE_VULKAN_BACKEND;VALIDATE_USAGE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <DefineConstants>TRACE;EXCLUDE_VULKAN_BACKEND;VALIDATE_USAGE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors" />
+    <Reference Include="System.Runtime.CompilerServices.Unsafe">
+      <HintPath>..\..\submodules\System.Runtime.CompilerServices.Unsafe.Desktop\build\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Android\AndroidRuntime.cs" />
+    <Compile Include="BindableResource.cs" />
+    <Compile Include="BlendAttachmentDescription.cs" />
+    <Compile Include="BlendFactor.cs" />
+    <Compile Include="BlendFunction.cs" />
+    <Compile Include="BlendStateDescription.cs" />
+    <Compile Include="Buffer.cs" />
+    <Compile Include="BufferDescription.cs" />
+    <Compile Include="BufferUsage.cs" />
+    <Compile Include="CommandList.cs" />
+    <Compile Include="CommandListDescription.cs" />
+    <Compile Include="ComparisonKind.cs" />
+    <Compile Include="ComputePipelineDescription.cs" />
+    <Compile Include="D3D11\D3D11Buffer.cs" />
+    <Compile Include="D3D11\D3D11CommandList.cs" />
+    <Compile Include="D3D11\D3D11Fence.cs" />
+    <Compile Include="D3D11\D3D11Formats.cs" />
+    <Compile Include="D3D11\D3D11Framebuffer.cs" />
+    <Compile Include="D3D11\D3D11GraphicsDevice.cs" />
+    <Compile Include="D3D11\D3D11Pipeline.cs" />
+    <Compile Include="D3D11\D3D11ResourceCache.cs" />
+    <Compile Include="D3D11\D3D11ResourceFactory.cs" />
+    <Compile Include="D3D11\D3D11ResourceLayout.cs" />
+    <Compile Include="D3D11\D3D11ResourceSet.cs" />
+    <Compile Include="D3D11\D3D11Sampler.cs" />
+    <Compile Include="D3D11\D3D11Shader.cs" />
+    <Compile Include="D3D11\D3D11Swapchain.cs" />
+    <Compile Include="D3D11\D3D11Texture.cs" />
+    <Compile Include="D3D11\D3D11TextureView.cs" />
+    <Compile Include="D3D11\D3D11Util.cs" />
+    <Compile Include="DepthStencilStateDescription.cs" />
+    <Compile Include="DeviceResource.cs" />
+    <Compile Include="FaceCullMode.cs" />
+    <Compile Include="Fence.cs" />
+    <Compile Include="FormatHelpers.cs" />
+    <Compile Include="Framebuffer.cs" />
+    <Compile Include="FramebufferAttachment.cs" />
+    <Compile Include="FramebufferAttachmentDescription.cs" />
+    <Compile Include="FramebufferDescription.cs" />
+    <Compile Include="FrontFace.cs" />
+    <Compile Include="GraphicsBackend.cs" />
+    <Compile Include="GraphicsDevice.cs" />
+    <Compile Include="GraphicsDeviceFeatures.cs" />
+    <Compile Include="GraphicsDeviceOptions.cs" />
+    <Compile Include="GraphicsPipelineDescription.cs" />
+    <Compile Include="HashHelper.cs" />
+    <Compile Include="IllegalValueException.cs" />
+    <Compile Include="IndexFormat.cs" />
+    <Compile Include="IndirectDispatchArguments.cs" />
+    <Compile Include="IndirectDrawArguments.cs" />
+    <Compile Include="IndirectDrawIndexedArguments.cs" />
+    <Compile Include="MapMode.cs" />
+    <Compile Include="MappableResource.cs" />
+    <Compile Include="MappedResource.cs" />
+    <Compile Include="MappedResourceCacheKey.cs" />
+    <Compile Include="MappedResourceInfo.cs" />
+    <Compile Include="MTL\MTLBuffer.cs" />
+    <Compile Include="MTL\MTLCommandList.cs" />
+    <Compile Include="MTL\MTLFeatureSupport.cs" />
+    <Compile Include="MTL\MTLFence.cs" />
+    <Compile Include="MTL\MTLFormats.cs" />
+    <Compile Include="MTL\MTLFramebuffer.cs" />
+    <Compile Include="MTL\MTLFramebufferBase.cs" />
+    <Compile Include="MTL\MTLGraphicsDevice.cs" />
+    <Compile Include="MTL\MTLPipeline.cs" />
+    <Compile Include="MTL\MTLPlaceholderTexture.cs" />
+    <Compile Include="MTL\MTLResourceFactory.cs" />
+    <Compile Include="MTL\MTLResourceLayout.cs" />
+    <Compile Include="MTL\MTLResourceSet.cs" />
+    <Compile Include="MTL\MTLSampler.cs" />
+    <Compile Include="MTL\MTLShader.cs" />
+    <Compile Include="MTL\MTLSwapchain.cs" />
+    <Compile Include="MTL\MTLSwapchainFramebuffer.cs" />
+    <Compile Include="MTL\MTLTexture.cs" />
+    <Compile Include="MTL\MTLTextureView.cs" />
+    <Compile Include="MTL\MTLUnalignedBufferCopyInfo.cs" />
+    <Compile Include="OpenGL\EAGL\CAEAGLLayer.cs" />
+    <Compile Include="OpenGL\EAGL\EAGLContext.cs" />
+    <Compile Include="OpenGL\EGL\EGLNative.cs" />
+    <Compile Include="OpenGL\ManagedEntryList\BeginEntry.cs" />
+    <Compile Include="OpenGL\ManagedEntryList\ClearColorTargetEntry.cs" />
+    <Compile Include="OpenGL\ManagedEntryList\ClearDepthTargetEntry.cs" />
+    <Compile Include="OpenGL\ManagedEntryList\DispatchEntry.cs" />
+    <Compile Include="OpenGL\ManagedEntryList\DispatchIndirectEntry.cs" />
+    <Compile Include="OpenGL\ManagedEntryList\DrawEntry.cs" />
+    <Compile Include="OpenGL\ManagedEntryList\DrawIndexedEntry.cs" />
+    <Compile Include="OpenGL\ManagedEntryList\DrawIndexedIndirectEntry.cs" />
+    <Compile Include="OpenGL\ManagedEntryList\DrawIndirectEntry.cs" />
+    <Compile Include="OpenGL\ManagedEntryList\EndEntry.cs" />
+    <Compile Include="OpenGL\ManagedEntryList\OpenGLCommandEntry.cs" />
+    <Compile Include="OpenGL\ManagedEntryList\OpenGLManagedCommandEntryList.cs" />
+    <Compile Include="OpenGL\ManagedEntryList\OpenGLPooledCommandEntryList.cs" />
+    <Compile Include="OpenGL\ManagedEntryList\ResolveTextureEntry.cs" />
+    <Compile Include="OpenGL\ManagedEntryList\SetComputeResourceSetEntry.cs" />
+    <Compile Include="OpenGL\ManagedEntryList\SetFramebufferEntry.cs" />
+    <Compile Include="OpenGL\ManagedEntryList\SetGraphicsResourceSetEntry.cs" />
+    <Compile Include="OpenGL\ManagedEntryList\SetIndexBufferEntry.cs" />
+    <Compile Include="OpenGL\ManagedEntryList\SetPipelineEntry.cs" />
+    <Compile Include="OpenGL\ManagedEntryList\SetScissorRectEntry.cs" />
+    <Compile Include="OpenGL\ManagedEntryList\SetVertexBufferEntry.cs" />
+    <Compile Include="OpenGL\ManagedEntryList\SetViewportEntry.cs" />
+    <Compile Include="OpenGL\ManagedEntryList\UpdateBufferEntry.cs" />
+    <Compile Include="OpenGL\NoAllocEntryList\NoAllocBeginEntry.cs" />
+    <Compile Include="OpenGL\NoAllocEntryList\NoAllocClearColorTargetEntry.cs" />
+    <Compile Include="OpenGL\NoAllocEntryList\NoAllocClearDepthTargetEntry.cs" />
+    <Compile Include="OpenGL\NoAllocEntryList\NoAllocCopyBufferEntry.cs" />
+    <Compile Include="OpenGL\NoAllocEntryList\NoAllocCopyTextureEntry.cs" />
+    <Compile Include="OpenGL\NoAllocEntryList\NoAllocDispatchEntry.cs" />
+    <Compile Include="OpenGL\NoAllocEntryList\NoAllocDispatchIndirectEntry.cs" />
+    <Compile Include="OpenGL\NoAllocEntryList\NoAllocDrawEntry.cs" />
+    <Compile Include="OpenGL\NoAllocEntryList\NoAllocDrawIndexedEntry.cs" />
+    <Compile Include="OpenGL\NoAllocEntryList\NoAllocDrawIndexedIndirectEntry.cs" />
+    <Compile Include="OpenGL\NoAllocEntryList\NoAllocDrawIndirectEntry.cs" />
+    <Compile Include="OpenGL\NoAllocEntryList\NoAllocEndEntry.cs" />
+    <Compile Include="OpenGL\NoAllocEntryList\NoAllocGenerateMipmapsEntry.cs" />
+    <Compile Include="OpenGL\NoAllocEntryList\NoAllocResolveTextureEntry.cs" />
+    <Compile Include="OpenGL\NoAllocEntryList\NoAllocSetComputeResourceSetEntry.cs" />
+    <Compile Include="OpenGL\NoAllocEntryList\NoAllocSetFramebufferEntry.cs" />
+    <Compile Include="OpenGL\NoAllocEntryList\NoAllocSetGraphicsResourceSetEntry.cs" />
+    <Compile Include="OpenGL\NoAllocEntryList\NoAllocSetIndexBufferEntry.cs" />
+    <Compile Include="OpenGL\NoAllocEntryList\NoAllocSetPipelineEntry.cs" />
+    <Compile Include="OpenGL\NoAllocEntryList\NoAllocSetScissorRectEntry.cs" />
+    <Compile Include="OpenGL\NoAllocEntryList\NoAllocSetVertexBufferEntry.cs" />
+    <Compile Include="OpenGL\NoAllocEntryList\NoAllocSetViewportEntry.cs" />
+    <Compile Include="OpenGL\NoAllocEntryList\NoAllocUpdateBufferEntry.cs" />
+    <Compile Include="OpenGL\NoAllocEntryList\OpenGLNoAllocCommandEntryList.cs" />
+    <Compile Include="OpenGL\OpenGLBuffer.cs" />
+    <Compile Include="OpenGL\OpenGLCommandEntryList.cs" />
+    <Compile Include="OpenGL\OpenGLCommandExecutor.cs" />
+    <Compile Include="OpenGL\OpenGLCommandList.cs" />
+    <Compile Include="OpenGL\OpenGLDeferredResource.cs" />
+    <Compile Include="OpenGL\OpenGLExtensions.cs" />
+    <Compile Include="OpenGL\OpenGLFence.cs" />
+    <Compile Include="OpenGL\OpenGLFormats.cs" />
+    <Compile Include="OpenGL\OpenGLFramebuffer.cs" />
+    <Compile Include="OpenGL\OpenGLGraphicsDevice.cs" />
+    <Compile Include="OpenGL\OpenGLPipeline.cs" />
+    <Compile Include="OpenGL\OpenGLPlaceholderTexture.cs" />
+    <Compile Include="OpenGL\OpenGLPlatformInfo.cs" />
+    <Compile Include="OpenGL\OpenGLResourceFactory.cs" />
+    <Compile Include="OpenGL\OpenGLResourceLayout.cs" />
+    <Compile Include="OpenGL\OpenGLResourceSet.cs" />
+    <Compile Include="OpenGL\OpenGLSampler.cs" />
+    <Compile Include="OpenGL\OpenGLShader.cs" />
+    <Compile Include="OpenGL\OpenGLSwapchain.cs" />
+    <Compile Include="OpenGL\OpenGLSwapchainFramebuffer.cs" />
+    <Compile Include="OpenGL\OpenGLTexture.cs" />
+    <Compile Include="OpenGL\OpenGLTextureSamplerManager.cs" />
+    <Compile Include="OpenGL\OpenGLTextureView.cs" />
+    <Compile Include="OpenGL\OpenGLUtil.cs" />
+    <Compile Include="OutputAttachmentDescription.cs" />
+    <Compile Include="OutputsDescription.cs" />
+    <Compile Include="Pipeline.cs" />
+    <Compile Include="PixelFormat.cs" />
+    <Compile Include="PixelFormatProperties.cs" />
+    <Compile Include="PolygonFillMode.cs" />
+    <Compile Include="PrimitiveTopology.cs" />
+    <Compile Include="RasterizerStateDescription.cs" />
+    <Compile Include="ResourceBindingModel.cs" />
+    <Compile Include="ResourceFactory.cs" />
+    <Compile Include="ResourceKind.cs" />
+    <Compile Include="ResourceLayout.cs" />
+    <Compile Include="ResourceLayoutDescription.cs" />
+    <Compile Include="ResourceLayoutElementDescription.cs" />
+    <Compile Include="ResourceSet.cs" />
+    <Compile Include="ResourceSetDescription.cs" />
+    <Compile Include="RgbaByte.cs" />
+    <Compile Include="RgbaFloat.cs" />
+    <Compile Include="Sampler.cs" />
+    <Compile Include="SamplerAddressMode.cs" />
+    <Compile Include="SamplerBorderColor.cs" />
+    <Compile Include="SamplerDescription.cs" />
+    <Compile Include="SamplerFilter.cs" />
+    <Compile Include="Shader.cs" />
+    <Compile Include="ShaderConstantType.cs" />
+    <Compile Include="ShaderDescription.cs" />
+    <Compile Include="ShaderSetDescription.cs" />
+    <Compile Include="ShaderStages.cs" />
+    <Compile Include="SpecializationConstant.cs" />
+    <Compile Include="StagingMemoryPool.cs" />
+    <Compile Include="StencilBehaviorDescription.cs" />
+    <Compile Include="StencilOperation.cs" />
+    <Compile Include="Swapchain.cs" />
+    <Compile Include="SwapchainDescription.cs" />
+    <Compile Include="SwapchainSource.cs" />
+    <Compile Include="Texture.cs" />
+    <Compile Include="TextureDescription.cs" />
+    <Compile Include="TextureSampleCount.cs" />
+    <Compile Include="TextureType.cs" />
+    <Compile Include="TextureUsage.cs" />
+    <Compile Include="TextureView.cs" />
+    <Compile Include="TextureViewDescription.cs" />
+    <Compile Include="Util.cs" />
+    <Compile Include="VdException.cs" />
+    <Compile Include="VertexElementDescription.cs" />
+    <Compile Include="VertexElementFormat.cs" />
+    <Compile Include="VertexElementSemantic.cs" />
+    <Compile Include="VertexLayoutDescription.cs" />
+    <Compile Include="Viewport.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="MTL\EmbeddedShaders\MTL_UnalignedBufferCopy_iOS.metallib" />
+    <None Include="MTL\EmbeddedShaders\MTL_UnalignedBufferCopy_macOS.metallib" />
+    <None Include="MTL\EmbeddedShaders\recompile-shaders.sh" />
+    <None Include="MTL\EmbeddedShaders\UnalignedBufferCopy.metal" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="SharpDX">
+      <Version>4.2.0</Version>
+    </PackageReference>
+    <PackageReference Include="SharpDX.D3DCompiler">
+      <Version>4.2.0</Version>
+    </PackageReference>
+    <PackageReference Include="SharpDX.Direct3D11">
+      <Version>4.2.0</Version>
+    </PackageReference>
+    <PackageReference Include="SharpDX.DXGI">
+      <Version>4.2.0</Version>
+    </PackageReference>
+    <PackageReference Include="System.ValueTuple">
+      <Version>4.5.0</Version>
+    </PackageReference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\submodules\nativelibraryloader.desktop\NativeLibraryLoader\NativeLibraryloader.Desktop.csproj">
+      <Project>{ad90cd49-48a4-4d48-853d-0f6c25ea1c1d}</Project>
+      <Name>NativeLibraryloader.Desktop</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Veldrid.MetalBindings\Veldrid.MetalBindings.Desktop.csproj">
+      <Project>{a4087858-664e-4c75-bf79-497a69be63a9}</Project>
+      <Name>Veldrid.MetalBindings.Desktop</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Veldrid.OpenGLBindings\Veldrid.OpenGLBindings.Desktop.csproj">
+      <Project>{b8746993-c1e8-4c0b-b6bd-60d68dcb8745}</Project>
+      <Name>Veldrid.OpenGLBindings.Desktop</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

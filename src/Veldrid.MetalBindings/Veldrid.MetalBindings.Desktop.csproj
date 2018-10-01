@@ -1,0 +1,149 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{A4087858-664E-4C75-BF79-497A69BE63A9}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Veldrid.MetalBindings.Desktop</RootNamespace>
+    <AssemblyName>Veldrid.MetalBindings.Desktop</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.CompilerServices.Unsafe">
+      <HintPath>..\..\submodules\System.Runtime.CompilerServices.Unsafe.Desktop\build\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Bool8.cs" />
+    <Compile Include="CALayer.cs" />
+    <Compile Include="CAMetalDrawable.cs" />
+    <Compile Include="CAMetalLayer.cs" />
+    <Compile Include="CGFloat.cs" />
+    <Compile Include="CGPoint.cs" />
+    <Compile Include="CGRect.cs" />
+    <Compile Include="CGSize.cs" />
+    <Compile Include="Dispatch.cs" />
+    <Compile Include="FixedUtf8String.cs" />
+    <Compile Include="MTLBlendFactor.cs" />
+    <Compile Include="MTLBlendOperation.cs" />
+    <Compile Include="MTLBlitCommandEncoder.cs" />
+    <Compile Include="MTLBuffer.cs" />
+    <Compile Include="MTLClearColor.cs" />
+    <Compile Include="MTLCommandBuffer.cs" />
+    <Compile Include="MTLCommandBufferHandler.cs" />
+    <Compile Include="MTLCommandBufferStatus.cs" />
+    <Compile Include="MTLCommandQueue.cs" />
+    <Compile Include="MTLCompareFunction.cs" />
+    <Compile Include="MTLCompileOptions.cs" />
+    <Compile Include="MTLComputeCommandEncoder.cs" />
+    <Compile Include="MTLComputePipelineDescriptor.cs" />
+    <Compile Include="MTLComputePipelineState.cs" />
+    <Compile Include="MTLCPUCacheMode.cs" />
+    <Compile Include="MTLCullMode.cs" />
+    <Compile Include="MTLDataType.cs" />
+    <Compile Include="MTLDepthClipMode.cs" />
+    <Compile Include="MTLDepthStencilDescriptor.cs" />
+    <Compile Include="MTLDepthStencilState.cs" />
+    <Compile Include="MTLDevice.cs" />
+    <Compile Include="MTLFeatureSet.cs" />
+    <Compile Include="MTLFunction.cs" />
+    <Compile Include="MTLFunctionConstantValues.cs" />
+    <Compile Include="MTLIndexType.cs" />
+    <Compile Include="MTLLanguageVersion.cs" />
+    <Compile Include="MTLLibrary.cs" />
+    <Compile Include="MTLLoadAction.cs" />
+    <Compile Include="MTLMutability.cs" />
+    <Compile Include="MTLOrigin.cs" />
+    <Compile Include="MTLPipelineBufferDescriptor.cs" />
+    <Compile Include="MTLPipelineBufferDescriptorArray.cs" />
+    <Compile Include="MTLPixelFormat.cs" />
+    <Compile Include="MTLPrimitiveType.cs" />
+    <Compile Include="MTLRegion.cs" />
+    <Compile Include="MTLRenderCommandEncoder.cs" />
+    <Compile Include="MTLRenderPassColorAttachmentDescriptor.cs" />
+    <Compile Include="MTLRenderPassColorAttachmentDescriptorArray.cs" />
+    <Compile Include="MTLRenderPassDepthAttachmentDescriptor.cs" />
+    <Compile Include="MTLRenderPassDescriptor.cs" />
+    <Compile Include="MTLRenderPassStencilAttachmentDescriptor.cs" />
+    <Compile Include="MTLRenderPipelineColorAttachmentDescriptor.cs" />
+    <Compile Include="MTLRenderPipelineColorAttachmentDescriptorArray.cs" />
+    <Compile Include="MTLRenderPipelineDescriptor.cs" />
+    <Compile Include="MTLRenderPipelineState.cs" />
+    <Compile Include="MTLResourceOptions.cs" />
+    <Compile Include="MTLSamplerAddressMode.cs" />
+    <Compile Include="MTLSamplerBorderColor.cs" />
+    <Compile Include="MTLSamplerDescriptor.cs" />
+    <Compile Include="MTLSamplerMinMagFilter.cs" />
+    <Compile Include="MTLSamplerMipFilter.cs" />
+    <Compile Include="MTLSamplerState.cs" />
+    <Compile Include="MTLScissorRect.cs" />
+    <Compile Include="MTLSize.cs" />
+    <Compile Include="MTLStencilDescriptor.cs" />
+    <Compile Include="MTLStencilOperation.cs" />
+    <Compile Include="MTLStorageMode.cs" />
+    <Compile Include="MTLStoreAction.cs" />
+    <Compile Include="MTLTexture.cs" />
+    <Compile Include="MTLTextureDescriptor.cs" />
+    <Compile Include="MTLTextureType.cs" />
+    <Compile Include="MTLTextureUsage.cs" />
+    <Compile Include="MTLTriangleFillmode.cs" />
+    <Compile Include="MTLUtil.cs" />
+    <Compile Include="MTLVertexAttributeDescriptor.cs" />
+    <Compile Include="MTLVertexAttributeDescriptorArray.cs" />
+    <Compile Include="MTLVertexBufferLayoutDescriptor.cs" />
+    <Compile Include="MTLVertexBufferLayoutDescriptorArray.cs" />
+    <Compile Include="MTLVertexDescriptor.cs" />
+    <Compile Include="MTLVertexFormat.cs" />
+    <Compile Include="MTLVertexStepFunction.cs" />
+    <Compile Include="MTLViewport.cs" />
+    <Compile Include="MTLWinding.cs" />
+    <Compile Include="NSArray.cs" />
+    <Compile Include="NSAutoreleasePool.cs" />
+    <Compile Include="NSDictionary.cs" />
+    <Compile Include="NSError.cs" />
+    <Compile Include="NSRange.cs" />
+    <Compile Include="NSString.cs" />
+    <Compile Include="NSView.cs" />
+    <Compile Include="NSWindow.cs" />
+    <Compile Include="ObjCClass.cs" />
+    <Compile Include="ObjectiveCMethod.cs" />
+    <Compile Include="ObjectiveCRuntime.cs" />
+    <Compile Include="Selector.cs" />
+    <Compile Include="Selectors.cs" />
+    <Compile Include="UIView.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

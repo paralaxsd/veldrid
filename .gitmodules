@@ -1,0 +1,6 @@
+[submodule "submodules/System.Runtime.CompilerServices.Unsafe.Desktop"]
+	path = submodules/System.Runtime.CompilerServices.Unsafe.Desktop
+	url = https://github.com/paralaxsd/System.Runtime.CompilerServices.Unsafe.Desktop.git
+[submodule "submodules/nativelibraryloader.desktop"]
+	path = submodules/nativelibraryloader.desktop
+	url = https://github.com/paralaxsd/nativelibraryloader.desktop.git
