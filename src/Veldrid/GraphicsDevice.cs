@@ -77,6 +77,12 @@ namespace Veldrid
         }
 
         /// <summary>
+        /// Ensures that a given action is executed in a context supported by the graphics device.
+        /// This may result in execution on another thread.
+        /// </summary>
+        public virtual void ProcessCustomWorkItem(Action action) => action();
+
+        /// <summary>
         /// Submits the given <see cref="CommandList"/> for execution by this device.
         /// Commands submitted in this way may not be completed when this method returns.
         /// Use <see cref="WaitForIdle"/> to wait for all submitted commands to complete.

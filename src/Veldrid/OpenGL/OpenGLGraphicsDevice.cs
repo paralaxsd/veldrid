@@ -105,6 +105,11 @@ namespace Veldrid.OpenGL
             Init(options, platformInfo, width, height, true);
         }
 
+        public override void ProcessCustomWorkItem(Action action)
+        {
+            _workItems.Add(new ExecutionThreadWorkItem(action));
+        }
+
         private void Init(
             GraphicsDeviceOptions options,
             OpenGLPlatformInfo platformInfo,
